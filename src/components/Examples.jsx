@@ -1,11 +1,12 @@
 import {EXAMPLES} from "../data"
 import { useState } from "react";
 import TabButton from "./TabButton";
+import Section from "./Section";
 
 
 
 
-function Examples() {
+export default function Examples() {
 
     //let dynamicContent = 'Press any tab' // Doesn't work before App is only rub Once , so even through var is updated the rendered doesn't reder. Need to use States
     const [selectedTabState , setSelectedTabState] = useState();
@@ -15,8 +16,7 @@ function Examples() {
     }
 
     return (
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section id="examples" title="Examples">
             <menu>
             <TabButton 
                 onClick={() => handleClick('components')} 
@@ -49,9 +49,9 @@ function Examples() {
             ) : (
             <p>Please Select a tab</p>
             )}
-        </section>
+        </Section>
     )
 }
 
 
-export default Examples;
+//export default Examples;

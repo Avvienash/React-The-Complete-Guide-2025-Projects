@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import CoreConcepts from "./components/CoreConcepts";
 import Examples from "./components/Examples";
 
-function App() 
+export default function App() 
 {
   return (
     <>
@@ -16,4 +16,4 @@ function App()
   );
 }
 
-export default App;
+ //export defaultApp;
