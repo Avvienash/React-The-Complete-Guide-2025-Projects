@@ -1,9 +1,14 @@
+import PlayerInfo from "./components/PlayerInfo"
+
 
 function App() {
-  
-
   return (
-    <h1>Hello World</h1>
+    <div id="game-container">
+      <ol id="players">
+        <PlayerInfo initialPlayerName="Player 1" playerSymbol="X" />
+        <PlayerInfo initialPlayerName="Player 2" playerSymbol="O" />
+      </ol>
+    </div>
   )
 }
 
