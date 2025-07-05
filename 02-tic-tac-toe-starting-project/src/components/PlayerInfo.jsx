@@ -1,7 +1,7 @@
+//rfc
 import React, { useState } from 'react'
 
-
-export default function PlayerInfo({initialPlayerName,playerSymbol,isActive}) {
+export default function PlayerInfo({initialPlayerName,playerSymbol,isActive,savePlayerNameFnc}) {
 
 
     const [isEditingState, setEditingState] = useState(false)
@@ -13,6 +13,7 @@ export default function PlayerInfo({initialPlayerName,playerSymbol,isActive}) {
         setEditingState((e) => !e);
         // DO NOT USE : setEditingState(!isEditing) 
         // The function is not instant, it is sheduled 
+        savePlayerNameFnc(playerName);
     }
 
     function handleChange(event){
@@ -23,7 +24,7 @@ export default function PlayerInfo({initialPlayerName,playerSymbol,isActive}) {
     <li className={isActive ? "active" : ""}>
         <span className="player">
             {!isEditingState && <span className="player-name">{playerName}</span> }
-            {isEditingState && <input type='text' Value={playerName} required onChange={handleChange}/> }
+            {isEditingState && <input type='text' value={playerName} required onChange={handleChange}/> }
             <span className="player-symbol">{playerSymbol}</span>
         </span>
         <button onClick={handleEditingState}>

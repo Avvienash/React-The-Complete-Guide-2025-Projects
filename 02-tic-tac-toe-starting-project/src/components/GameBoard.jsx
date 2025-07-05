@@ -10,7 +10,12 @@ export default function GameBoard({handleButtonPressfnc,gameBoard}) {
                     <ol>
                         {row.map((symbol,colIndex) => 
                             <li key={colIndex}>
-                                <button onClick={symbol != null ? () => {} : () => handleButtonPressfnc(rowIndex, colIndex)}>{symbol}</button>
+                                <button 
+                                onClick={() => handleButtonPressfnc(rowIndex, colIndex)} 
+                                disabled={symbol !== null}
+                                >
+                                {symbol}
+                                </button>
                             </li>
                         )}
                     </ol>
