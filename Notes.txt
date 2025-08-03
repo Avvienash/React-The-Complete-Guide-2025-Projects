@@ -1,0 +1,10 @@
+To start: 
+npm run dev
+npm intsall
+
+TO create component Shortcut:
+rfc
+
+import Image:
+import headerImage from '../assets/investment-calculator-logo.png'
+
