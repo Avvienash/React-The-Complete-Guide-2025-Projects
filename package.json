@@ -1,0 +1,11 @@
+{
+  "name": "homepage",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "gh-pages -d . -r https://github.com/Avvienash/React-The-Complete-Guide-2025-Projects.git -b gh-pages"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
