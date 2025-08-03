@@ -8,3 +8,29 @@ rfc
 import Image:
 import headerImage from '../assets/investment-calculator-logo.png'
 
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  base: '/React-The-Complete-Guide-2025-Projects/03-investment-calculator/',
+  plugins: [react()],
+})
+
+
+
+"homepage": "https://github.com/Avvienash/React-The-Complete-Guide-2025-Projects/03-investment-calculator",
+"scripts": {
+"dev": "vite",
+"build": "vite build",
+"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+"preview": "vite preview",
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist -r https://github.com/Avvienash/React-The-Complete-Guide-2025-Projects.git --dest 03-investment-calculator"
+
+},
+
+https://avvienash.github.io/React-The-Complete-Guide-2025-Projects/02-tic-tac-toe-starting-project/
+
+npm install gh-pages --save-dev
+npm run build
+npm run deploy
