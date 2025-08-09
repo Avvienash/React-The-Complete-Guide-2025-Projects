@@ -25,7 +25,7 @@ export default function GameOver({winner,player1Name,player2Name,setGameState, s
         <h2>Game Over</h2>
         {winner === null && <p>Draw!</p> }
         {winner === "X" && <p>{player1Name} Wins!</p> }
-        {winner === "Y" && <p>{player2Name} Wins!</p> }
+        {winner === "O" && <p>{player2Name} Wins!</p> }
         <p><button onClick={resetGame}>Rematch!</button></p>
     </div>
   )
